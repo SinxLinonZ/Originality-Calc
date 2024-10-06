@@ -90,6 +90,7 @@ def convert_midi_to_points(input_file="",
             midi_data = mido.MidiFile(input_file)
         except Exception as e:
             print(f'Error reading midi file: {input_file}')
+            exit(1)
 
         # Convert note to points
         midi_points = get_points_from_midi(midi_data)

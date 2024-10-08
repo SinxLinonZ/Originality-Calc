@@ -22,7 +22,7 @@ void output_result(SimilarityResult result, std::string filename) {
         j["maxSimilarities"].push_back(piece);
     }
     j["similarityMean"] = result.similarityMean;
-    write_file("output\\" + filename + ".json", j.dump());
+    write_file(filename + ".json", j.dump());
 }
 
 std::vector<std::set<Point>> read_points_from_file(std::ifstream& file) {
